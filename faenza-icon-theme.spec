@@ -1,6 +1,6 @@
 %define zipname	 Faenza_Icons_by_tiheum
 %define name	 faenza-icon-theme
-%define version	 0.6
+%define version	 0.7
 %define release	 %mkrel 1
 
 Name:           %{name}
@@ -52,7 +52,7 @@ touch %{buildroot}%{_iconsdir}/Faenza-Dark/icon-theme.cache
 
 %files
 %defattr(0644,root,root,0755)
-%doc *.txt
+%doc AUTHORS ChangeLog COPYING README
 %dir %{_datadir}/icons/Faenza
 %dir %{_datadir}/icons/Faenza-Dark
 %{_iconsdir}/Faenza*
