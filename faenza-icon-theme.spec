@@ -1,6 +1,6 @@
-%define zipname	 Faenza_Icons_by_tiheum
+%define zipname	 faenza_icons_by_tiheum-d2v6x24
 %define name	 faenza-icon-theme
-%define version	 0.7
+%define version	 0.8
 %define release	 %mkrel 1
 
 Name:           %{name}
@@ -58,5 +58,4 @@ touch %{buildroot}%{_iconsdir}/Faenza-Dark/icon-theme.cache
 %{_iconsdir}/Faenza*
 %ghost %{_iconsdir}/Faenza/icon-theme.cache
 %ghost %{_iconsdir}/Faenza-Dark/icon-theme.cache
-
 
