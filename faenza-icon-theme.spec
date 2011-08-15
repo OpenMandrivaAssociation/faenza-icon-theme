@@ -1,5 +1,5 @@
 %define name	 faenza-icon-theme
-%define version	 0.9.2
+%define version	 1.0
 %define release	 %mkrel 1
 
 Name:           %{name}
