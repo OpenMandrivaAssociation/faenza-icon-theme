@@ -1,5 +1,5 @@
 %define name	 faenza-icon-theme
-%define version	 1.1
+%define version	 1.2
 %define release	 %mkrel 1
 
 Name:           %{name}
@@ -27,7 +27,7 @@ Gnome menu items.
 Four themes are included to fit with light or dark themes/panels.
 
 %prep
-%setup -q -c %{name}-%{version}
+%setup -q -n %{name}-%{version}
 
 %install
 %__rm -rf %{buildroot}
@@ -36,34 +36,43 @@ find Faenza* -type f -exec chmod 644 {} \;
 %__install -d -m 755 %{buildroot}%{_iconsdir}
 %__mv Faenza* %{buildroot}%{_iconsdir}
 touch %{buildroot}%{_iconsdir}/Faenza/icon-theme.cache
+touch %{buildroot}%{_iconsdir}/Faenza-Ambiance/icon-theme.cache
 touch %{buildroot}%{_iconsdir}/Faenza-Dark/icon-theme.cache
 touch %{buildroot}%{_iconsdir}/Faenza-Darker/icon-theme.cache
 touch %{buildroot}%{_iconsdir}/Faenza-Darkest/icon-theme.cache
+touch %{buildroot}%{_iconsdir}/Faenza-Radiance/icon-theme.cache
 
 %post
 %update_icon_cache Faenza
+%update_icon_cache Faenza-Ambiance
 %update_icon_cache Faenza-Dark
 %update_icon_cache Faenza-Darker
 %update_icon_cache Faenza-Darkest
+%update_icon_cache Faenza-Radiance
 
 %postun
 %clean_icon_cache Faenza
+%clean_icon cache Faenza-Ambiance
 %clean_icon_cache Faenza-Dark
 %clean_icon_cache Faenza-Darker
 %clean_icon_cache Faenza-Darkest
+%clean_icon_cache Faenza_Radiance
 
 %clean
 %__rm -rf %{buildroot}
 
 %files
 %defattr(0644,root,root,0755)
-%doc AUTHORS ChangeLog COPYING README
 %dir %{_datadir}/icons/Faenza
+%dir %{_datadir}/icons/Faenza-Ambiance
 %dir %{_datadir}/icons/Faenza-Dark
 %dir %{_datadir}/icons/Faenza-Darker
 %dir %{_datadir}/icons/Faenza-Darkest
+%dir %{_datadir}/icons/Faenza-Radiance
 %{_iconsdir}/Faenza*
 %ghost %{_iconsdir}/Faenza/icon-theme.cache
+%ghost %{_iconsdir}/Faenza-Ambiance/icon-theme.cache
 %ghost %{_iconsdir}/Faenza-Dark/icon-theme.cache
 %ghost %{_iconsdir}/Faenza-Darker/icon-theme.cache
 %ghost %{_iconsdir}/Faenza-Darkest/icon-theme.cache
+%ghost %{_iconsdir}/Faenza-Radiance/icon-theme.cache
