@@ -5,7 +5,7 @@ Summary:	Faenza icon theme
 Group:		Graphical desktop/Other
 License:	GPLv3+
 URL:		http://tiheum.deviantart.com/art/Faenza-Icons-173323228
-Source0:	https://faenza-icon-theme.googlecode.com/files/faenza-sources_%{version}.tar.gz
+Source0:	http://faenza-icon-theme.googlecode.com/files/%{name}_%{version}.zip
 
 Requires(post):	gtk+2
 Requires(postun):	gtk+2
