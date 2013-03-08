@@ -1,11 +1,11 @@
 Name:		faenza-icon-theme
-Version:	1.2
-Release:	2
+Version:	1.3
+Release:	1
 Summary:	Faenza icon theme
 Group:		Graphical desktop/Other
 License:	GPLv3+
 URL:		http://tiheum.deviantart.com/art/Faenza-Icons-173323228
-Source0:	http://faenza-icon-theme.googlecode.com/files/%{name}_%{version}.tar.gz
+Source0:	https://faenza-icon-theme.googlecode.com/files/faenza-sources_%{version}.tar.gz
 
 Requires(post):	gtk+2
 Requires(postun):	gtk+2
