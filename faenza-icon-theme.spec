@@ -24,7 +24,11 @@ applications, folder, files and Gnome menu items.
 Four themes are included to fit with light or dark themes/panels.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -c
+for f in Faenza Faenza-Ambiance Faenza-Dark Faenza-Darker Faenza-Darkest Faenza-Radiance
+do
+    tar xzf ${f}.tar.gz
+done
 
 %install
 find Faenza* -type d -exec chmod 755 {} \;
