@@ -1,6 +1,6 @@
 Name:		faenza-icon-theme
 Version:	1.3
-Release:	2
+Release:	3
 Summary:	Faenza icon theme
 Group:		Graphical desktop/Other
 License:	GPLv3+
