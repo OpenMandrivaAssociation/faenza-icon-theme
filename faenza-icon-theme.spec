@@ -31,10 +31,8 @@ done
 find Faenza* -type d -exec chmod 755 {} \;
 find Faenza* -type f -exec chmod 644 {} \;
 find . -name "*.theme" -exec rm -rf {} \;
-#find . -type f -name "*.theme" -o -name "*.cache" -exec rm -f {} \;
 
 echo "Nothing to build"
-
 
 %install
 install -d -m 755 %{buildroot}%{_iconsdir}
