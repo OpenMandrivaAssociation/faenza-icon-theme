@@ -30,7 +30,6 @@ done
 #fix rights
 find Faenza* -type d -exec chmod 755 {} \;
 find Faenza* -type f -exec chmod 644 {} \;
-find . -name "*.theme" -exec rm -rf {} \;
 
 echo "Nothing to build"
 
@@ -55,8 +54,6 @@ do
         ln -sf ./start-here-gnome-symbolic.${icon##*.} ${icon##*/}
     popd
 done
-
-#rm -rf %{buildroot}%{_iconsdir}/*/{*.cache,*.theme,*.tar.gz}
 
 # ghost files
 touch %{buildroot}%{_iconsdir}/Faenza/icon-theme.cache
@@ -323,6 +320,7 @@ touch %{buildroot}%{_iconsdir}/Faenza-Radiance/icon-theme.cache
 %{_iconsdir}/Faenza*/*/*/*.xpm
 %{_iconsdir}/Faenza*/*/*/*.svg
 %{_iconsdir}/Faenza*/*/*/*/*.svg
+%{_iconsdir}/Faenza*/*.theme
 %ghost %{_iconsdir}/Faenza/icon-theme.cache
 %ghost %{_iconsdir}/Faenza-Ambiance/icon-theme.cache
 %ghost %{_iconsdir}/Faenza-Dark/icon-theme.cache
